@@ -1,5 +1,5 @@
 import './App.css';
-//import PokeSheet from "./Components/pokeSheet";
+//import PokeSheet from "./pages/pokeSheet";
 
 function App() {
   return (

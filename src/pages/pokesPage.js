@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import getAllPokeService from "../services/pokeService";
 import ListOfPokes from "../components/ListOfPokes";
-export default function PokeSheet(){
+
+export default function PokesPage(){
 
     const [pokes, setPokes] = useState([])
     useEffect(() =>{
@@ -17,6 +18,5 @@ export default function PokeSheet(){
             </h1>
             <ListOfPokes pokes={pokes}/>
         </div>
-
     )
 }

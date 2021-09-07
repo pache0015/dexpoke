@@ -1,10 +1,10 @@
 import './App.css';
-import PokeSheet from "./pages/pokeSheet";
+import PokesPage from "./pages/pokesPage";
 
 function App() {
   return (
     <div className="App">
-      <PokeSheet/>
+      <PokesPage/>
     </div>
   );
 }

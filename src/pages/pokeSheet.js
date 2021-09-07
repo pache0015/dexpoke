@@ -1,9 +1,22 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import getAllPokeService from "../services/pokeService";
+import ListOfPokes from "../components/ListOfPokes";
 export default function PokeSheet(){
 
+    const [pokes, setPokes] = useState([])
+    useEffect(() =>{
+        getAllPokeService().then(pokes =>{
+            setPokes(pokes)
+        })
+    }, [pokes])
+
     return(
-        <h1>
-            Dexpoke
-        </h1>
+        <div>
+            <h1>
+                Dexpoke
+            </h1>
+            <ListOfPokes pokes={pokes}/>
+        </div>
+
     )
 }

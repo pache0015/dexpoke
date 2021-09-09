@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import getAllPokeService from "../services/pokeService";
+import getAllPokeService from "../services/getAllPokes";
 import ListOfPokes from "../components/ListOfPokes";
 
 export default function PokesPage(){
@@ -10,12 +10,13 @@ export default function PokesPage(){
             setPokes(pokes)
         })
     }, [pokes])
+    //<!-- <img src="https://fontmeme.com/permalink/210909/8a80221862eebc306c5e6e0c02f40d9b.png" alt="fuente-pokemon" border="0" className="logo" /> -->
 
     return(
-        <div>
-            <h1>
-                Dexpoke
-            </h1>
+        <div className="pokesPage">
+            <div className="title">
+                <img src="https://fontmeme.com/permalink/210909/6b717e89b0cf6edee3eb1ad499b22000.png" alt="fuente-pokemon" border="0" className="logo" />
+            </div>
             <ListOfPokes pokes={pokes}/>
         </div>
     )

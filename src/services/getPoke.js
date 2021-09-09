@@ -1,9 +1,9 @@
 import axios from "axios";
 
-export default function getAllPokeService(){
-    return axios.get('https://pokeapi.co/api/v2/pokemon?limit=1500')
+export default function getOnePokeService(url){
+    return axios.get(`${url}`)
         .then(response => {
-            return response.data.results;
+            return response.data;
         })
         .catch((error) => {
             console.log('error ' + error);

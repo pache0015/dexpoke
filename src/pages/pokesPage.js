@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import getAllPokeService from "../services/getAllPokes";
 import ListOfPokes from "../components/ListOfPokes";
+import Searchbar from "../components/Searchbar";
 
 export default function PokesPage(){
 
@@ -22,6 +23,7 @@ export default function PokesPage(){
             <div className="title">
                 <img src="https://fontmeme.com/permalink/210909/6b717e89b0cf6edee3eb1ad499b22000.png" alt="fuente-pokemon" border="0" className="logo" />
             </div>
+            <Searchbar/>
             <ListOfPokes pokes={pokes}/>
             <div className="more" onClick={viewMore}>
                 Mostrar más

@@ -17,10 +17,15 @@ export default function Poke({name, url}){
             setImgOther(data.sprites.other.dream_world.front_default)
         })
     }, [url])
+
+    function capitalize(str){
+        const lower = str.toLowerCase()
+        return str.charAt(0).toUpperCase() + lower.slice(1)
+    }
     return(
         <Link className="poke" to={`/poke/${url}`}>
             <img src={imgOther}/>
-            <h3>{name}</h3>
+            <h3>{capitalize(name)}</h3>
         </Link>
     )
 }

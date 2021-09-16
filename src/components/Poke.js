@@ -23,7 +23,7 @@ export default function Poke({name, url}){
         return str.charAt(0).toUpperCase() + lower.slice(1)
     }
     return(
-        <Link className="poke" to={`/poke/${url}`}>
+        <Link className="poke" to={`/poke/${id}`}>
             <img src={imgOther}/>
             <h3>{capitalize(name)}</h3>
         </Link>

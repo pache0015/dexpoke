@@ -10,16 +10,12 @@ import {
 function App() {
   return (
       <Router>
-          <div>
-              <Switch>
-                  <Route path="/">
-                      <PokesPage/>
-                  </Route>
-                  <Route path="/poke/:id">
-                      <PokePage/>
-                  </Route>
-              </Switch>
-          </div>
+        <Switch>
+            <Route path="/">
+                <PokesPage/>
+            </Route>
+            <Route path="/poke/:id" children={<PokePage />}/>
+        </Switch>
       </Router>
   );
 }

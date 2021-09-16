@@ -29,7 +29,7 @@ export default function PokesPage(){
             </div>
             <div className="searchbar">
                 <input
-                    placeholder="Search..."
+                    placeholder="Search by name..."
                     type="text"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}

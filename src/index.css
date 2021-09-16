@@ -42,6 +42,7 @@ code {
 }
 .pokesPage{
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -62,10 +63,10 @@ code {
 }
 .listOfPokes{
   width: 80%;
+  min-height: 70vh;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: center;
   flex-wrap: wrap;
 }
 .poke{
@@ -84,6 +85,10 @@ code {
 }
 .poke img{
   height: 70%;
+  transition: 0.2s;
+}
+.poke:hover img{
+  height: 75%;
 }
 
 .more{
